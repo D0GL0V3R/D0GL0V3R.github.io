@@ -18,7 +18,7 @@ Fast forward a few weeks, and I’m sitting here in Russia. Talk about the butte
 
 ---
 
-# Experience of the Camp
+## Experience of the Camp
 
 ### Let me just say this: *VIP Treatment for Broke Students*
 
