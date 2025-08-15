@@ -1,5 +1,1 @@
-Here you can say lots of fun things about your site.
-
-Maybe say a some things about yourself.
-
-Or maybe what you plan to blog about.
+Documenting my journey through the world of cybersecurity and digital forensics — from personal experiences to CTF challenges and hackathons. Here, I share the lessons, mistakes, and victories that come with navigating the ever-changing tech landscape.
