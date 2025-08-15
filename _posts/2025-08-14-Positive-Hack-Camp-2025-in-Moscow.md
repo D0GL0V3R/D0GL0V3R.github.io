@@ -1,4 +1,6 @@
-# How I Ended Up in a Hacker Camp in Moscow
+# Positive Hack Camp 2025 — Moscow
+
+## How I Ended Up in a Hacker Camp in Moscow
 
 ### The question I get the most: *“Wan Yin, how did you even hear about Positive Hack Camp 2025?”*
 
