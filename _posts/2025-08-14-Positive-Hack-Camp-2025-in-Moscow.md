@@ -18,7 +18,7 @@ Fast forward a few weeks, and I’m sitting here in Russia. Talk about the butte
 
 ---
 
-## Experience of the Camp
+## Experience of the Camp 🚩
 
 ### Let me just say this: *VIP Treatment for Broke Students*
 
@@ -40,3 +40,60 @@ Positive Technologies must have a magic amount of fund because they treated us l
 
 And yes — on arrival, I was still suspicious. Seventeen hours of flying and jet lag had me side-eyeing everything. For a good few hours, I wondered if I had just fallen for the world’s most elaborate cybersecurity scam. I didn’t fully relax until we checked in and they handed me my own keycard for my own hotel room.
 
+## Let's Get Technical 💻
+
+Each day followed a simple but effective rhythm: **two speakers, one topic, and a lot of hacking (the legal kind).**
+First, we’d dive into the theory — slides, demos, and expert explanations to set the stage. Then came the fun part: **hands-on challenges.**
+
+These challenges worked like **mini CTFs**: find the hidden flag, prove you understood the lesson, and maybe earn some bragging rights on the scoreboard. It kept things lively, tested our skills on the spot, and made sure no one could just “nod along” without actually learning.
+
+### Day 1 — Exploration in the Customer's External Infrastructure and Social Engineering
+
+Our first day at Positive Hack Camp kicked off with a lesson in **reconnaissance** — basically, the hacker’s version of people-watching, except the “people” are networks, domains, and servers. The goal? Gather as much intel as possible before making any moves.
+
+**Active vs Passive Reconnaissance**
+
+- **Active reconnaissance** → The loud approach. Port scanning, domain name enumeration…, interacting directly with the target. Great for penetration testing, but leaves digital footprints.
+
+- **Passive reconnaissance** → The silent ninja. Internet monitoring, database analysis, and open-source intelligence gathering. No direct contact with the target, so you’re much harder to detect.
+
+When doing recon, hackers usually hunt for:
+1. Domain names
+2. Active hosts
+3. Open ports
+4. Operating systems in use
+5. Software versions
+6. Technology stack
+
+**Penetration Testing vs Red Teaming**
+
+One key takeaway:
+
+- **Penetration testing** → Short, intense, and with more upfront knowledge. Think of it like stress-testing a system.
+
+- **Red teaming** → Slow and stealthy. Simulates a real-world attack to test both security detection and incident response. It can take weeks or even months.
+
+**Our Recon Toolbox**
+
+- Domain intel services → `whois`, `SPARK`, `RIPE`
+
+- Subdomain hunting:
+
+  - DNS Zone Transfer → If a server is misconfigured, you can download the DNS zone file.
+      - Tools: `dig`
+
+  - DNS Brute Forcing → Guessing subdomains using dictionaries.
+
+    - Tools: `nslookup`, `subfinder`, `amass`, `sublist3r`, `assetfinder`
+
+- Passive search resources → using public online resources
+
+  - dnsdumpster.com
+  - shodan.io
+  - censys.io
+  - crt.sh
+  - pentest-tools.com
+
+We wrapped up the day practising with nmap and dig for zone transfers on the challenges provided. By the end, I realised recon isn’t just technical — it’s part science, part creativity.
+
+### Day 2 — Hacking Web Applications
