@@ -16,7 +16,6 @@ Honestly? **Shocked** and **grateful**. Initially, I didn’t even plan to regis
 
 Fast forward a few weeks, and I’m sitting here in Russia. Talk about the butterfly effect 🦋 — from a Discord ping to standing in front of the Red Square, wondering how I got here.
 
----
 
 ## Experience of the Camp 🚩
 
@@ -46,6 +45,8 @@ Each day followed a simple but effective rhythm: **two speakers, one topic, and 
 First, we’d dive into the theory — slides, demos, and expert explanations to set the stage. Then came the fun part: **hands-on challenges.**
 
 These challenges worked like **mini CTFs**: find the hidden flag, prove you understood the lesson, and maybe earn some bragging rights on the scoreboard. It kept things lively, tested our skills on the spot, and made sure no one could just “nod along” without actually learning.
+
+---
 
 ### Day 1 — Exploration in the Customer's External Infrastructure and Social Engineering
 
@@ -96,4 +97,72 @@ One key takeaway:
 
 We wrapped up the day practising with nmap and dig for zone transfers on the challenges provided. By the end, I realised recon isn’t just technical — it’s part science, part creativity.
 
+---
+
 ### Day 2 — Hacking Web Applications
+
+The second day was all about web application security. We explored how modern applications handle requests and responses, and then moved into practical exploitation techniques.
+
+**Understanding HTTP Requests and Responses**
+
+Before diving into attacks, we needed a solid foundation of how web communication works:
+
+- HTTP Request contains:
+
+  - Method → GET, POST, PUT, DELETE
+
+  - Path → e.g. /login.php
+
+  - Protocol → HTTP/1.1, HTTP/2, etc.
+
+  - Headers → Content-Type, Cookie, etc.
+
+  - Body (optional) → Usually present in POST requests
+
+- HTTP Response contains:
+
+  - Protocol → e.g. HTTP/1.1
+
+  - Status → 200 (OK), 404 (Not Found), 302 (Redirect), etc.
+
+  - Status Message → Short text for the code
+
+  - Headers → e.g. Set-Cookie, Content-Type
+
+  - Body → The actual response data (HTML, JSON, etc.)
+
+👉 Fun fact: when editing HTTP requests manually in Burp Suite, don't delete the two empty lines at the end — otherwise, the request won’t be processed correctly. Easy to overlook, but important.
+
+**Exploitation Techniques Covered**
+
+We then moved on to classic web vulnerabilities:
+
+- **OS Command Injection (Shell Injection)**: Executing system commands through vulnerable input fields.
+
+- **SQL Injection (SQLi)**: Injecting malicious SQL queries to read or modify database data.
+
+  - Practised using `UNION SELECT` and `GROUP_CONCAT` to enumerate columns, tables, and extract data.
+
+- **Path Traversal**: Accessing files outside the intended directories by manipulating file paths (e.g., ../../etc/passwd).
+
+- **XML External Entity Injection (XXE)**: Injecting or editing the DOCTYPE element in XML to load external entities, then retrieving sensitive data.
+
+- **Insecure Direct Object References (IDOR)**: Exploiting predictable identifiers in URLs or requests to access data belonging to other users.
+
+*Pro tip: inserting plain text commands doesn’t always work. Sometimes, sanitisation blocks you, so I have to use “creative replacements” like ${IFS} for a space.*
+
+I noticed that Cross-Site Scripting (XSS) was listed on the learning platform, but due to time constraints, it wasn’t covered that day. I guess that means it’s self-study time!
+
+**Tools and Techniques**
+
+- Burp Suite → Our main tool for intercepting and modifying requests.
+
+- Brute force tools → `patator`, `medusa`, `hydra`, `OWASP ZAP`.
+
+- Directory discovery → `ffuf`, `dirsearch` (requires a good wordlist).
+
+Day 2 really showed how fragile web applications can be if proper input validation and sanitization aren’t enforced. Even small mistakes in request handling can lead to serious compromises.
+
+---
+
+### Day 3 — Exploit Known Vulnerabilities in Network Services
