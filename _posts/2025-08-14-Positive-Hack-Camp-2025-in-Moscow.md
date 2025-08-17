@@ -256,7 +256,7 @@ Once the payload was ready, we used `swaks` to craft and send phishing emails. T
 
 **Post-Exploitation Persistence**
 
-Getting initial access is only the first step. Once inside, attackers want to **secure their position** so they don’t lose access. We learned several persistence techniques, such as:
+Getting initial access is only the first step. Once inside, attackers want to *secure their position* so they don’t lose access. We learned several persistence techniques, such as:
 
 - Creating or modifying legitimate user accounts
 
