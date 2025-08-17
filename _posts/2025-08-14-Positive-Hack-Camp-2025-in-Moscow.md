@@ -219,3 +219,53 @@ Exploitation isn’t just about using tools — it’s about thinking creatively
 ---
 
 ### Day 4 - Social Engineering and Securing Access (C2)
+
+Day 4 was all about combining technical skills with the *human factor*. While earlier days focused on network scanning and exploiting vulnerabilities, this time we explored how attackers can gain initial access through social engineering, specifically phishing campaigns.
+
+**Recon for Emails**
+
+Before sending any phishing email, the attacker first needs a list of valid targets. We learned how to enumerate email addresses for a given domain:
+
+1. Identify the domain IP
+
+2. Gather the domain name
+
+3. Understand the email format used (e.g., firstname.lastname@domain.com)
+
+4. Enumerate possible accounts with `smtp-user-enum`
+
+⚠️ *Of course, this only works if the SMTP protocol is open and exposed.*
+
+**Crafting the Payload**
+
+With potential emails in hand, the next step was generating something “useful” to deliver. Here’s where `MsfVenom` came in. We created reverse shell payloads that could be attached to phishing emails, allowing us to gain a foothold in the victim’s machine if opened.
+
+**Sending the Phish**
+
+Once the payload was ready, we used `swaks` to craft and send phishing emails. This provided us with hands-on practice in understanding how attackers structure their delivery methods.
+
+**Masking Techniques**
+
+- **Domain Masking** – making the sender appear from a trusted domain
+
+- **Sender Spoofing** – forging the “From” address
+
+- **Evil Proxy** – relaying credentials through a malicious proxy
+
+- **Sending Without Authorisation** – abusing misconfigured SMTP servers that don’t require authentication
+
+**Post-Exploitation Persistence**
+
+Getting initial access is only the first step. Once inside, attackers want to **secure their position** so they don’t lose access. We learned several persistence techniques, such as:
+
+- Creating or modifying legitimate user accounts
+
+- Reconfiguring services or programs to maintain access
+
+- Modifying the OS kernel or system-level services for stealthy control
+
+Day 4 showed how phishing and social engineering remain one of the most effective attack vectors. The technical payload matters, but often it’s the weakest link — **the human** — that provides the entry point. Equally important, once an attacker is in, persistence mechanisms ensure long-term control of the compromised system.
+
+---
+
+### Day 5 - Privilege Escalation on Server Systems
