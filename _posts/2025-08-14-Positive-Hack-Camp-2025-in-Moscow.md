@@ -16,6 +16,7 @@ Honestly? **Shocked** and **grateful**. Initially, I didn’t even plan to regis
 
 Fast forward a few weeks, and I’m sitting here in Russia. Talk about the butterfly effect 🦋 — from a Discord ping to standing in front of the Red Square, wondering how I got here.
 
+---
 
 ## Experience of the Camp 🚩
 
@@ -39,6 +40,8 @@ Positive Technologies must have a magic amount of fund because they treated us l
 
 And yes — on arrival, I was still suspicious. Seventeen hours of flying and jet lag had me side-eyeing everything. For a good few hours, I wondered if I had just fallen for the world’s most elaborate cybersecurity scam. I didn’t fully relax until we checked in and they handed me my own keycard for my own hotel room.
 
+---
+
 ## Let's Get Technical 💻
 
 Each day followed a simple but effective rhythm: **two speakers, one topic, and a lot of hacking (the legal kind).**
@@ -48,7 +51,7 @@ These challenges worked like **mini CTFs**: find the hidden flag, prove you unde
 
 ---
 
-### Day 1 — Exploration in the Customer's External Infrastructure and Social Engineering
+### Day 1 — Exploration in the Customer's External Infrastructure
 
 Our first day at Positive Hack Camp kicked off with a lesson in **reconnaissance** — basically, the hacker’s version of people-watching, except the “people” are networks, domains, and servers. The goal? Gather as much intel as possible before making any moves.
 
@@ -166,3 +169,53 @@ Day 2 really showed how fragile web applications can be if proper input validati
 ---
 
 ### Day 3 — Exploit Known Vulnerabilities in Network Services
+
+Today was all about going beyond reconnaissance and directly exploiting vulnerabilities in network services. Most of the day was hands-on with **Metasploit Framework** (msfconsole) — one of the most widely used tools for penetration testing.
+
+**General Exploitation Principles**
+
+Before jumping into the tool, we learned the general process of exploitation:
+
+- **Target Enumeration** → Identify the version of the service (via source code, banners, nmap, etc.).
+
+- **Vulnerability Research** → Check for known vulnerabilities in that version (via msfconsole, exploit databases, or online sources).
+
+- **Exploit Selection** → Pick the most suitable exploit from the options available.
+
+- **Exploit Execution** → Understand what the exploit does, configure it properly, and then run it.
+
+This structured approach ensures we’re not just “firing exploits blindly,” but actually understanding and controlling what’s happening.
+
+**Using Metasploit (msfconsole)**
+
+The steps we practised looked like this:
+
+- `search <exploit>` → Look up exploits related to the target.
+
+- `use <path>` → Load the specific exploit module.
+
+- `info` / `options` → Review what parameters need configuration.
+
+- `set <parameter> <value>` → Configure options like target IP, payload, or port.
+
+- `check` → See if the target is vulnerable.
+
+- `run` → Execute the exploit.
+
+It’s a systematic process, but also requires judgment in choosing the right exploit for the target.
+
+**Payloads and Meterpreter**
+
+We also worked with **payloads** — code delivered during exploitation that gives us control of the target. One of the most useful payloads is **Meterpreter**, which provides an interactive reverse shell on the compromised machine. With it, we could:
+
+- Maintain access to the system
+
+- Execute commands remotely
+
+- Explore files and processes
+
+Exploitation isn’t just about using tools — it’s about thinking creatively and adapting to the situation. Metasploit simplifies the process, but true skill comes from spotting vulnerabilities and knowing how to leverage them effectively.
+
+---
+
+### Day 4 - Social Engineering and Securing Access (C2)
