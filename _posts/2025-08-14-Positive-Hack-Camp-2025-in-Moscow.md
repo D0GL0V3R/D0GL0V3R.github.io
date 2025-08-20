@@ -269,3 +269,49 @@ Day 4 showed how phishing and social engineering remain one of the most effectiv
 ---
 
 ### Day 5 - Privilege Escalation on Server Systems
+
+If the first few days were about “breaking in,” today was about what to do once you’re inside: climb the ladder until you’re basically root. In other words, **Privilege Escalation 101**.
+
+We worked mainly on UNIX-like systems and explored four key techniques:
+
+1. **Sudo Escalation**
+
+- Run `sudo -l` to see what commands can be executed with elevated privileges.
+
+- Research if those commands can be abused (spoiler: many can).
+
+- Craft an exploit and escalate.
+
+2. **SUID Escalation**
+
+- Search for files with the SUID bit set: `find / -type f -perm -4000 2>/dev/null`
+
+
+- Identify which ones can be abused to spawn a shell.
+
+- I also learned about `SUID3NUM`, a handy tool to automate this search and check for exploitability.
+
+3. **Crontab Escalation**
+
+- Check scheduled tasks with: `cat /etc/crontab`
+
+
+- If there’s a process you can modify (like scripts running as root), you can hijack it for privilege escalation.
+
+4. **Kernel Exploitation**
+
+- Identify the kernel version with `uname -r.
+
+- Look up vulnerabilities for that version.
+
+- Use tools like **Linux Exploit Suggester** or **Linux Exploit Suggester 2** to automate the hunt.
+
+- Exploit the weakness and gain root access.
+
+**Tools of the Day**
+
+- **linpeas.sh** → Automates privilege escalation checks, giving a full scan of potential weaknesses.
+
+- **pspy** → Lets you monitor processes (including cron jobs) without needing root — very handy for spotting escalation opportunities.
+
+Privilege escalation isn’t just about running exploits blindly. It’s about methodically enumerating, spotting weak configurations, and chaining small misconfigurations into a big win. 
