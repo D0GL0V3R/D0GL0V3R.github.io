@@ -412,6 +412,7 @@ Once potential Windows nodes are found, there are a few main ways to gain initia
   - EternalBlue (MS17-010, CVE-2017-0143)
   - BlueKeep (CVE-2019-0708)
 
+
 2. **Bruteforce Attacks** → Against services like SMB, MSSQL, LDAP, or RDP. Attackers must avoid lockout thresholds to stay effective.
 
 3. **Traffic Interception & MITM** → Using **LLMNR/NBT-NS/MDNS spoofing** to trick machines into sending credentials. Tools like `Responder`, `NBNSpoof`, or even `Metasploit` modules can be used here.
