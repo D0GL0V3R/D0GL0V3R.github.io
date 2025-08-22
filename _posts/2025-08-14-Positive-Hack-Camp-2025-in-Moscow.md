@@ -385,4 +385,84 @@ Getting inside a network is one thing. **Moving deeper without getting caught is
 
 ---
 
-### Day 7 - Privilege Escalation on Local Network Nodes (OS Windows)
+### Day 7 - Network Reconnaissance and Compromise of Windows Machines & Privilege Escalation on Local Network Nodes (OS Windows)
+
+Today’s focus was on **Windows systems** in a local network: how to discover them, gain initial access, and then escalate privileges to take full control. Unlike Linux, Windows often *“announces itself”* in a network through specific services and ports, which makes it relatively easy to spot.
+
+**Step 1: Identifying Windows Machines**
+
+We learned to identify potential Windows hosts by scanning for ports commonly tied to Windows services:
+
+- **88** (Kerberos)
+- **135** (RPC)
+- **137** (NetBIOS)
+- **389** (LDAP)
+- **445** (SMB)
+- **1433** (MSSQL)
+- **3389** (RDP)
+
+If these ports show up in a scan, there’s a good chance the host is running Windows.
+
+**Step 2: Primary Access Methods**
+
+Once potential Windows nodes are found, there are a few main ways to gain initial access:
+
+1. **Exploits** → Targeting known vulnerabilities in specific Windows versions. Some popular ones include:
+  - MS08-067 (CVE-2008-4250)
+  - EternalBlue (MS17-010, CVE-2017-0143)
+  - BlueKeep (CVE-2019-0708)
+
+2. **Bruteforce Attacks** → Against services like SMB, MSSQL, LDAP, or RDP. Attackers must avoid lockout thresholds to stay effective.
+
+3. **Traffic Interception & MITM** → Using **LLMNR/NBT-NS/MDNS spoofing** to trick machines into sending credentials. Tools like `Responder`, `NBNSpoof`, or even `Metasploit` modules can be used here.
+
+Windows is especially vulnerable in local networks because of its heavy use of **broadcast/multicast** requests and predictable service ports.
+
+**Step 3: Remote Connection Tools**
+
+Once credentials or access are obtained, attackers can connect remotely using:
+
+- `Evil-WinRM` → A common entry tool for Windows remote shells.
+
+- `wmiexec.py` (Impacket) → Executes commands via WMI.
+
+- `psexec.py` (Impacket) → Runs commands like Microsoft’s PsExec utility.
+
+- `xfreerdp` / `rdesktop` → GUI-based RDP clients.
+
+*(Note: psexec.py is part of the Impacket toolkit and allows executing commands remotely via SMB.)*
+
+**Step 4: Privilege Escalation Techniques**
+
+Once inside, the real fun begins: privilege escalation. We used **WinPEAS** to scan for weaknesses and misconfigurations. Some techniques include:
+
+- Extracting credentials from logs, command history, or RAM (using tools like **Mimikatz**).
+
+- Dumping NTLM password hashes and performing **Pass-the-Hash** attacks.
+
+- Abusing misconfigurations:
+
+  - **SeBackupPrivilege** (backup rights abuse)
+
+  - **SeImpersonatePrivilege** (JuicyPotato attack)
+
+  - **AlwaysInstallElevated** (install software as admin)
+
+  - **Service Binary Path** / **DLL Hijacking** / **Unquoted Service Paths**
+
+We also looked at famous Windows vulnerabilities used for privilege escalation:
+
+- **InstallerFileTakeOver** (0-day in Windows Installer)
+
+- **PrintNightmare** (Windows Print Spooler) → Can be checked with rpcdump.py
+
+- **MS16-014** (Windows Kernel)
+
+- **MS16-032** (Secondary Logon Service)
+
+Windows machines provide a huge attack surface due to decades of legacy features, their broad compatibility, and default settings that are often too permissive. On top of that, organisations usually configure Windows systems in a unified way (same accounts, remote protocols, domain authentication), which means a single foothold can often snowball into total domain compromise.
+
+---
+**Network Reconnaissance and Compromise of Windows Machines is originally covered on Day 8 but I combined it with day 7 so that it makes more sense.*
+
+### Day 8 - Network Infrastructure Management Capture
