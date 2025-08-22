@@ -393,13 +393,13 @@ Today’s focus was on **Windows systems** in a local network: how to discover t
 
 We learned to identify potential Windows hosts by scanning for ports commonly tied to Windows services:
 
-- **88** (Kerberos)
-- **135** (RPC)
-- **137** (NetBIOS)
-- **389** (LDAP)
-- **445** (SMB)
-- **1433** (MSSQL)
-- **3389** (RDP)
+- 88 (Kerberos)
+- 135 (RPC)
+- 137 (NetBIOS)
+- 389 (LDAP)
+- 445 (SMB)
+- 1433 (MSSQL)
+- 3389 (RDP)
 
 If these ports show up in a scan, there’s a good chance the host is running Windows.
 
