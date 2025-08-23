@@ -467,3 +467,72 @@ Windows machines provide a huge attack surface due to decades of legacy features
 **Network Reconnaissance and Compromise of Windows Machines is originally covered on Day 8 but I combined it with day 7 so that it makes more sense.*
 
 ### Day 8 - Network Infrastructure Management Capture
+
+Today was all about owning the big boss of the network: the **Domain Controller (DC)**. If you compromise a DC, you basically control the entire domain — users, machines, policies, secrets, the works. It’s like finding the master key to an entire office building.
+
+**Administrator Group Capabilities**
+
+We started by looking into the **Administrator groups** in Active Directory. Access to one of these groups often means:
+
+- You can configure the entire Domain or even a Forest.
+
+- You can manage any machine and any user account.
+
+- You can dump all the juicy stuff — secrets, keys, password hashes — straight from the Domain Controller.
+
+And once you have those, you can forge tokens, log on to machines, and move through the network at will.
+
+**DCSync Attack**
+
+DCSync attack abuses the fact that domain controllers replicate data between each other using the **Directory Replication Service Remote Protocol (MS-DRSR)**.
+
+- Attackers can impersonate a DC and request replication of user credentials (NTLM hashes, Kerberos keys, etc.).
+
+- The scary part: this isn’t some “hacky trick.” It’s a legit feature of Active Directory, and it cannot simply be disabled.
+
+Tool used: `SecretsDump` (Impacket)
+
+Example command: `impacket-secretsdump test.local/john:password123@10.10.10.1`
+
+This allows you to extract password hashes remotely — no agent required on the target.
+
+**Zerologon (CVE-2020-1472)**
+
+Zerologon — one of the most infamous vulnerabilities ever found in Windows DCs. The bug comes from the Netlogon protocol, where the initialisation vector (IV) for encryption was always zero.
+
+With this, an attacker can:
+
+1. Reset the Domain Controller’s machine account password to an **empty value**.
+
+2. Run a **DCSync attack** with the empty password.
+
+3. Extract the Administrator **NT hash** (RID 500).
+
+4. Use tools like `WMIExec` (Impacket) to remotely control the DC.
+
+5. Finally, reset the DC’s original password using `SYSTEM`, `SAM`, and `SECURITY` registry hives to avoid breaking the domain.
+
+Basically, Zerologon was a *“one-click → instant Domain Admin”* type of vulnerability.
+
+**Recon Tools in AD**
+
+We also explored some tools for information gathering in Active Directory:
+
+- `nxc` (NetExec) → An enumeration tool for accounts, shares, and objects.
+
+- `BloodHound` → Maps hidden relationships inside AD using graph theory. Perfect for spotting unexpected privilege escalation paths.
+
+**Exploiting AD Certificate Services (AD CS)**
+
+One of the juiciest misconfigurations comes from Active Directory Certificate Services. This is where **Certipy** comes in:
+
+- If AD CS templates are misconfigured, attackers can request certificates that allow **client authentication** with arbitrary **Subject Alternative Names (SANs)**.
+
+- This means you can issue yourself a certificate for the **Domain Administrator**, even though you’re not one. With that cert, you can authenticate as the **Domain Admin** and effectively own the domain.
+
+The Active Directory infrastructure is extremely powerful, but also extremely messy. With decades of legacy, countless dependencies, and tricky-to-secure features, it’s full of potential misconfigurations. Even organisations with strong defences often have small cracks that, if chained together, can completely compromise the domain.
+
+---
+
+### Day 9 - Countering Detection and Responses & White Hacker's Roadmap
+
