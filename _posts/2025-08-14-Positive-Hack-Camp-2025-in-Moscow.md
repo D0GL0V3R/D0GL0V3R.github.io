@@ -1,4 +1,6 @@
 # Positive Hack Camp 2025 — Moscow
+![Cover photo](/images/Cover.jpg)
+
 ## What Is Positive Hack Camp?
 
 Positive Hack Camp is an international, hands-on cybersecurity training program organised by [Positive Technologies](https://global.ptsecurity.com/en/) in collaboration with **Positive Education**, with support from the **Russian Ministry of Digital Development, Communications and Mass Media**. 
