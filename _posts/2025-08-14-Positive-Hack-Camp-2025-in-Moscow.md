@@ -28,6 +28,7 @@ Fast forward a few weeks, and I’m sitting here in Russia. Talk about the butte
 ---
 
 ## Experience of the Camp 🚩
+![Party photo](/_posts/images/Party.jpg)
 
 ### Let me just say this: *VIP Treatment for Broke Students*
 
@@ -52,6 +53,7 @@ And yes — on arrival, I was still suspicious. Seventeen hours of flying and je
 ---
 
 ## Let's Get Technical 💻
+![Classroom photo](/_posts/images/Classroom.jpg)
 
 Each day followed a simple but effective rhythm: **two speakers, one topic, and a lot of hacking (the legal kind).**
 First, we’d dive into the theory — slides, demos, and expert explanations to set the stage. Then came the fun part: **hands-on challenges.**
@@ -228,6 +230,7 @@ Exploitation isn’t just about using tools — it’s about thinking creatively
 ---
 
 ### Day 4 - Social Engineering and Securing Access (C2)
+![Learning photo](/_posts/images/Learning.jpg)
 
 Day 4 was all about combining technical skills with the *human factor*. While earlier days focused on network scanning and exploiting vulnerabilities, this time we explored how attackers can gain initial access through social engineering, specifically phishing campaigns.
 
@@ -632,6 +635,7 @@ Defence isn’t passive — it’s active, layered, and constantly evolving. As 
 ---
 
 ## Examination!!!
+![Certificate photo](/_posts/images/Certificate.jpg)
 
 The final test was nothing short of intense. We were given **5 hours** to solve three different challenges:
 
@@ -652,6 +656,7 @@ Coming from a **blue team background** with little to no prior experience in red
 ---
 
 ## Shoutouts & Gratitude 🎉
+![Closing photo](/_posts/images/Closing.jpg)
 
 Before I wrap this up, I’ve got to give some massive shoutouts:
 
