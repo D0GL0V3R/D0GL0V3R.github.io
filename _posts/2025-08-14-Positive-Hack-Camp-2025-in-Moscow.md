@@ -640,7 +640,7 @@ Defence isn’t passive — it’s active, layered, and constantly evolving. As 
 ---
 
 ## Examination!!!
-![Certificate photo](/_posts/images/Certificate.jpg)
+![Exam photo](/_posts/images/Exam.jpg)
 
 The final test was nothing short of intense. We were given **5 hours** to solve three different challenges:
 
@@ -678,3 +678,5 @@ And of course, the amazing **friends I made in Russia** who put up with my “wa
 Honestly, I already miss [**Positive Hack Camp**](https://camp.ptsecurity.com/) and my time in Moscow — the cold, the chaos, the late-night hacking sessions, and fun excursions we had. It was truly life-changing, and I’m beyond grateful I got to experience it.
 
 If you’re reading this and there’s another camp next year — **GO for it**!!! 
+
+![Certificate photo](/_posts/images/Certificate.jpg)
