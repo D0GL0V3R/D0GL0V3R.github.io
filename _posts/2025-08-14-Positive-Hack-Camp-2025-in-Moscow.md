@@ -1,4 +1,11 @@
 # Positive Hack Camp 2025 — Moscow
+## What Is Positive Hack Camp?
+
+Positive Hack Camp is an international, hands-on cybersecurity training program organised by [Positive Technologies](https://global.ptsecurity.com/en/) in collaboration with **Positive Education**, with support from the **Russian Ministry of Digital Development, Communications and Mass Media**. 
+
+Held in Moscow over two intensive weeks, the camp gathers emerging cybersecurity professionals—over 90 participants from 25 countries across Asia, Africa, and the Middle East in its latest session. The curriculum spans essential topics such as network infrastructure scanning, social engineering, web application testing, and professional ethics, blending real-world technical challenges with cultural immersion 
+
+---
 
 ## How I Ended Up in a Hacker Camp in Moscow
 
@@ -22,7 +29,7 @@ Fast forward a few weeks, and I’m sitting here in Russia. Talk about the butte
 
 ### Let me just say this: *VIP Treatment for Broke Students*
 
-Here’s the thing: if this camp wasn’t free, I wouldn’t be here. Period. 🙃
+Here’s the thing: if this camp wasn’t free, I wouldn’t be here. 🙃
 
 Positive Hack Camp covered everything except the flight — and when I say everything, I mean:
 
@@ -536,3 +543,126 @@ The Active Directory infrastructure is extremely powerful, but also extremely me
 
 ### Day 9 - Countering Detection and Responses & White Hacker's Roadmap
 
+Today’s focus was less about breaking into systems, and more about how defenders try to catch us (and how attackers try to slip by undetected).
+
+**Detection Methods We Learned About**
+
+Organisations rely on a stack of defensive technologies:
+
+- **IDS** (Intrusion Detection Systems) – spot suspicious traffic.
+
+- **IPS** (Intrusion Prevention Systems) – block traffic in real-time.
+
+- **NGFW** (Next-Gen Firewalls) – smarter firewalls that mix IDS/IPS with policy enforcement.
+
+- **SIEM** (Security Information and Event Management) – the “command centre” for logs and alerts.
+
+- **EDR** (Endpoint Detection & Response) – keeps eyes on endpoints for suspicious behaviour.
+
+- **EPP** (Endpoint Protection Platform) – traditional antivirus/antimalware solutions.
+
+- **Honeypots** – intentional bait systems to trick attackers into revealing tactics.
+
+**The Incident Response Team**
+
+The **Security Operations Center (SOC)** is the front line of defense. Their main tasks are:
+
+- Threat identification & classification – figuring out what’s going on.
+
+- Rapid response – shutting down compromised systems.
+
+- Incident investigation – digging deeper to learn from attacks.
+
+Their process usually goes:
+
+- Notify management
+
+- Recover affected systems
+
+- Document & analyse the incident for future defences
+
+**How Attackers Try to Stay Hidden**
+
+To avoid being caught, attackers reduce their “footprint”:
+
+- Lower online activity
+
+- Encrypted communications (HTTPS, SSH, SMB, SMTP, TLS/SSL)
+
+**Malicious File Detection Techniques**
+
+- **Static analysis** → scanning files for known malicious signatures.
+
+  - Bypass with: encryption, obfuscation, or writing custom tools.
+
+- **Dynamic analysis** → running files in sandboxes to inspect behaviour.
+
+  - Bypass with: delayed execution (sleep timers), or environment checks.
+
+**Fileless Malware**
+
+We also learned about fileless malware – code that runs only in RAM, disappears after reboot and avoids traditional antivirus detection. To counter this, Microsoft introduced **AMSI (Anti-Malware Scan Interface)**, which helps security tools catch these memory-only attacks.
+
+**Tools for Load Generation & Evasion**
+
+Attackers often use specialised tools to bypass endpoint defences like EPP/EDR:
+
+- `Veil`
+- `Freeze`
+- `SGN`
+
+**The IP Rotation: Staying Under the Radar**
+
+Another classic detection countermeasure is IP rotation, because scanning too much from one IP often gets you blocked. Options include:
+
+- TOR (though it’s vulnerable to deanonymization)
+
+- Burp Suite IP Rotate plugin
+
+- fireprox, proxyrotator, stormproxies
+
+- Brightdata, Cloud Functions, AWS API Gateway, AWS Lambda
+
+The trick here is that rotating IPs buys time, but can also slow down scans or queries.
+
+Defence isn’t passive — it’s active, layered, and constantly evolving. As pentesters, learning how detection works is just as important as learning how to exploit, because if you can’t avoid being spotted, your “attack” is over before it even begins.
+
+---
+
+## Examination!!!
+
+The final test was nothing short of intense. We were given **5 hours** to solve three different challenges:
+
+- 1 **Linux** machine
+
+- 1 **Windows** machine
+
+- 1 **Web** application challenge
+
+Each task had 3 possible versions, and none of us knew which variant we’d get until the exam started. The requirement was simple but brutal: **solve all three tasks to pass.**
+
+We weren’t completely alone though — everyone was paired up, and we were only allowed to communicate with our assigned partner. 
+
+For me, the exam was a rollercoaster. The last stretch was especially stressful — I managed to submit my final solution literally in the last **2 minutes** of the exam. It was one of the most nerve-racking moments I’ve ever experienced in a test.
+
+Coming from a **blue team background** with little to no prior experience in red teaming, passing this exam felt huge. It wasn’t just about getting the CyberEd White Hacker(CEWH) certification — it gave me a real boost of confidence that I can approach offensive security and succeed at it.
+
+---
+
+## Shoutouts & Gratitude 🎉
+
+Before I wrap this up, I’ve got to give some massive shoutouts:
+
+- [**Positive Technologies**](https://global.ptsecurity.com/en/) 
+
+- [**Asia Pacific University**](https://www.apu.edu.my/) 
+
+- [**Velum Labs**](https://www.velumlabs.com/)
+
+- [**RE:HACK**](https://www.rehack.xyz)
+
+And of course, the amazing **friends I made in Russia** who put up with my “wait… what does this command do again?” moments for two whole weeks. You guys were legends.
+
+Honestly, I already miss [**Positive Hack Camp**](https://camp.ptsecurity.com/) and my time in Moscow — the cold, the chaos, the late-night hacking sessions, and fun excursions we had. It was truly life-changing, and I’m beyond grateful I got to experience it.
+
+If you’re reading this and there’s another camp next year — **GO for it**!!! 
