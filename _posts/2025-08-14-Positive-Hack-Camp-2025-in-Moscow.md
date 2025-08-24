@@ -1,5 +1,5 @@
 # Positive Hack Camp 2025 — Moscow
-![Cover photo](/images/Cover.jpg)
+![Cover photo](/_posts/images/Cover.jpg)
 
 ## What Is Positive Hack Camp?
 
