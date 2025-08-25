@@ -1,5 +1,5 @@
 # Positive Hack Camp 2025 — Moscow
-![Cover photo](/_posts/images/Cover.jpg)
+![Cover photo](/static/images/Cover.jpg)
 
 ## What Is Positive Hack Camp?
 
@@ -28,7 +28,7 @@ Fast forward a few weeks, and I’m sitting here in Russia. Talk about the butte
 ---
 
 ## Experience of the Camp 🚩
-![Party photo](/_posts/images/Party.jpg)
+![Party photo](/static/images/Party.jpg)
 
 ### Let me just say this: *VIP Treatment for Broke Students*
 
@@ -53,7 +53,7 @@ And yes — on arrival, I was still suspicious. Seventeen hours of flying and je
 ---
 
 ## Let's Get Technical 💻
-![Classroom photo](/_posts/images/Classroom.jpg)
+![Classroom photo](/static/images/Classroom.jpg)
 
 Each day followed a simple but effective rhythm: **two speakers, one topic, and a lot of hacking (the legal kind).**
 First, we’d dive into the theory — slides, demos, and expert explanations to set the stage. Then came the fun part: **hands-on challenges.**
@@ -114,7 +114,7 @@ We wrapped up the day practising with nmap and dig for zone transfers on the cha
 ---
 
 ### Day 2 — Hacking Web Applications
-![Learning photo](/_posts/images/Learning.jpg)
+![Learning photo](/static/images/Learning.jpg)
 
 The second day was all about web application security. We explored how modern applications handle requests and responses, and then moved into practical exploitation techniques.
 
@@ -181,7 +181,7 @@ Day 2 really showed how fragile web applications can be if proper input validati
 ---
 
 ### Day 3 — Exploit Known Vulnerabilities in Network Services
-![Day 3 photo](/_posts/images/Day%203.jpg)
+![Day 3 photo](/static/images/Day%203.jpg)
 
 Today was all about going beyond reconnaissance and directly exploiting vulnerabilities in network services. Most of the day was hands-on with **Metasploit Framework** (msfconsole) — one of the most widely used tools for penetration testing.
 
@@ -232,7 +232,7 @@ Exploitation isn’t just about using tools — it’s about thinking creatively
 ---
 
 ### Day 4 - Social Engineering and Securing Access (C2)
-![Day 4 photo](/_posts/images/Day%204.jpg)
+![Day 4 photo](/static/images/Day%204.jpg)
 
 Day 4 was all about combining technical skills with the *human factor*. While earlier days focused on network scanning and exploiting vulnerabilities, this time we explored how attackers can gain initial access through social engineering, specifically phishing campaigns.
 
@@ -333,7 +333,7 @@ Privilege escalation isn’t just about running exploits blindly. It’s about m
 ---
 
 ### Day 6 - Going Beyond the DMZ & Route Network Traffic
-![Day 6 photo](/_posts/images/Day%206.jpg)
+![Day 6 photo](/static/images/Day%206.jpg)
 
 So far, we’ve been poking around systems that are exposed to the internet. But in reality, the juicy stuff often lives behind the DMZ (Demilitarised Zone) — the part of a network that separates public-facing services from the internal, private ones. Day 6 was all about learning how attackers break past that barrier and move inside.
 
@@ -401,7 +401,7 @@ Getting inside a network is one thing. **Moving deeper without getting caught is
 ---
 
 ### Day 7 - Network Reconnaissance and Compromise of Windows Machines & Privilege Escalation on Local Network Nodes (OS Windows)
-![Day 7 photo](/_posts/images/Day%207.jpg)
+![Day 7 photo](/static/images/Day%207.jpg)
 
 Today’s focus was on **Windows systems** in a local network: how to discover them, gain initial access, and then escalate privileges to take full control. Unlike Linux, Windows often *“announces itself”* in a network through specific services and ports, which makes it relatively easy to spot.
 
@@ -483,7 +483,7 @@ Windows machines provide a huge attack surface due to decades of legacy features
 **Network Reconnaissance and Compromise of Windows Machines is originally covered on Day 8 but I combined it with day 7 so that it makes more sense.*
 
 ### Day 8 - Network Infrastructure Management Capture
-![Day 8 photo](/_posts/images/Day%208.jpg)
+![Day 8 photo](/static/images/Day%208.jpg)
 
 Today was all about owning the big boss of the network: the **Domain Controller (DC)**. If you compromise a DC, you basically control the entire domain — users, machines, policies, secrets, the works. It’s like finding the master key to an entire office building.
 
@@ -640,7 +640,7 @@ Defence isn’t passive — it’s active, layered, and constantly evolving. As 
 ---
 
 ## Examination!!!
-![Exam photo](/_posts/images/Exam.jpg)
+![Exam photo](/static/images/Exam.jpg)
 
 The final test was nothing short of intense. We were given **5 hours** to solve three different challenges:
 
@@ -661,7 +661,7 @@ Coming from a **blue team background** with little to no prior experience in red
 ---
 
 ## Shoutouts & Gratitude 🎉
-![Closing photo](/_posts/images/Closing.jpg)
+![Closing photo](/static/images/Closing.jpg)
 
 Before I wrap this up, I’ve got to give some massive shoutouts:
 
@@ -679,4 +679,4 @@ Honestly, I already miss [**Positive Hack Camp**](https://camp.ptsecurity.com/) 
 
 If you’re reading this and there’s another camp next year — **GO for it**!!! 
 
-![Certificate photo](/_posts/images/Certificate.jpg)
+![Certificate photo](/static/images/Certificate.jpg)
