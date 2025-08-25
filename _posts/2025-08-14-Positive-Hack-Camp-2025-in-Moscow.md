@@ -663,19 +663,19 @@ Coming from a **blue team background** with little to no prior experience in red
 ## Shoutouts & Gratitude 🎉
 ![Closing photo](/static/images/Closing.jpg)
 
-Before I wrap this up, I’ve got to give some massive shoutouts:
+Before I wrap this up, I’ve got to give some massive shoutouts to my sponsors:
 
-- [**Positive Technologies**](https://global.ptsecurity.com/en/) 
-
+- [**Positive Technologies**](https://global.ptsecurity.com/en/)
+- [**RE:HACK**](https://www.rehack.xyz)
 - [**Asia Pacific University**](https://www.apu.edu.my/) 
-
 - [**Velum Labs**](https://www.velumlabs.com/)
 
-- [**RE:HACK**](https://www.rehack.xyz)
 
-And of course, the amazing **friends I made in Russia** who put up with my “wait… what does this command do again?” moments for two whole weeks. You guys were legends.
+And of course, the amazing **friends I made in Russia** who had my back for two whole weeks. You guys were legends.
 
-Honestly, I already miss [**Positive Hack Camp**](https://camp.ptsecurity.com/) and my time in Moscow — the cold, the chaos, the late-night hacking sessions, and fun excursions we had. It was truly life-changing, and I’m beyond grateful I got to experience it.
+Honestly, I already miss [**Positive Hack Camp**](https://camp.ptsecurity.com/) and my time in Moscow — the cold, the chaos, the late-night hacking sessions, and fun excursions we had. Writing this blog has been like a trip down memory lane, and now that I’m wrapping it up, I feel a little sad all over again that it’s ending.
+
+Still, it was truly a life-changing experience, and I’m beyond grateful I got to be part of it.
 
 If you’re reading this and there’s another camp next year — **GO for it**!!! 
 
