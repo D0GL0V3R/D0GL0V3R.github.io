@@ -679,4 +679,6 @@ Still, it was truly a life-changing experience, and I’m beyond grateful I got 
 
 If you’re reading this and there’s another camp next year — **GO for it**!!! 
 
+You can register for Positive Hack Camp 2026 here: https://camp.ptsecurity.com/
+
 ![Certificate photo](/static/images/Certificate.jpg)
