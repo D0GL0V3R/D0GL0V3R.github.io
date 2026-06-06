@@ -1,4 +1,4 @@
-# Our First Attack-Defense CTF Experience: Getting Absolutely Destroyed at UMCS 2026
+# My First Attack-Defense CTF Experience: Getting Absolutely Destroyed at UMCS 2026
 
 ![AD Platform](/static/images/AD%20Platform.jpeg)
 
