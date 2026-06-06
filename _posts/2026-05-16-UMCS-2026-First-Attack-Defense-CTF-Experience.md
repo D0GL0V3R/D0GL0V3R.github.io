@@ -1,5 +1,7 @@
 # Our First Attack-Defense CTF Experience: Getting Absolutely Destroyed at UMCS 2026
 
+![AD Platform](/static/images/AD%20Platform.jpeg)
+
 A few weeks ago, my team, **Bob**, participated in the finals of UMCS CTF 2026. Looking back, it was probably one of the most brutal cybersecurity competitions I've ever experienced.
 
 And honestly?
@@ -21,13 +23,13 @@ Still, we weren't going to give up before even starting.
 
 A few days before the finals, our team started researching how Attack-Defense competitions worked. After reading various write-ups and watching videos, we came up with what we thought was a solid strategy.
 
-- Two of us would focus on defense.
+- Two of us would focus on defence.
 
-- Two of us would focus on offense.
+- Two of us would focus on offence.
 
-For defense, our goal was to monitor Docker logs, inspect network traffic, and, if we got lucky, capture exploit scripts used by other teams.
+For defence, our goal was to monitor Docker logs, inspect network traffic, and, if we got lucky, capture exploit scripts used by other teams.
 
-For offense, we planned to implement a simple Web Application Firewall (WAF) that would use regex rules to detect malicious requests and drop the request from teams attempting to steal our flags.
+For offence, we planned to implement a simple Web Application Firewall (WAF) that would use regex rules to detect malicious requests and drop the request from teams attempting to steal our flags.
 
 At the time, it sounded brilliant.
 
@@ -36,19 +38,23 @@ In hindsight, we had absolutely no idea what we were doing.
 ---
 ## So it Begins ...
 
-![AD Platform](/static/images/ADPlatform.jpeg)
-
 The competition started.
 
 Within minutes, our services were already being attacked.
 
-I was responsible for network monitoring, so I immediately fired up Wireshark and started listening on the VPN interface. Nothing useful appeared.
+I was responsible for network monitoring, so I immediately fired up Wireshark and started listening on the VPN interface. 
+
+![Wireshark Monitoring](/static/images/Wireshark%20Monitoring.jpeg)
+
+Nothing useful appeared.
 
 I switched to tshark.
 
 Still nothing.
 
 I even created a monitoring dashboard that tracked incoming and outgoing IP addresses, suspicious commands, and network activity.
+
+![Monitoring Dashboard](/static/images/Monitoring%20Dashboard.jpeg)
 
 Nothing.
 
