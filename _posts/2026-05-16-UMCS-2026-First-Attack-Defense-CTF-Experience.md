@@ -10,7 +10,10 @@ We got absolutely destroyed.
 
 But it was also one of the most valuable learning experiences I've had so far.
 
-The competition consists of two stages. The first stage was a traditional online Jeopardy-style CTF where teams solved challenges to earn points. The top 15 teams would qualify for the finals, which would be held physically at the University of Malaya in an Attack-Defense format.
+The competition had two stages:
+
+1. A traditional online Jeopardy-style CTF, where teams solved challenges to earn points.
+2. An in-person final at the University of Malaya in an Attack-Defense format, where the top 15 teams qualified.
 
 We made it through the first round and the excitement lasted right up until we realised that none of us had ever played an Attack-Defense CTF before.
 
@@ -90,7 +93,7 @@ As the competition progressed, reality started to sink in.
 Most of our effort went into making sure our Docker containers stayed alive so we wouldn't lose points from service downtime. At some point, restarting containers became our primary defensive strategy. It wasn't exactly the elite cyber warfare experience we had imagined. When the competition ended, we placed 11th out of 15 teams. Objectively speaking, that's not a great result.
 
 ---
-## After Thoughts
+## Afterthoughts
 
 Attack-Defense CTFs expose weaknesses that Jeopardy-style competitions often hide. In a Jeopardy challenge, you focus on solving one problem at a time. In Attack-Defense, you're expected to monitor systems, understand vulnerabilities, patch services, analyse attacks, maintain uptime, develop exploits, and steal flags simultaneously.
 
@@ -116,4 +119,6 @@ UMCS 2026 was our first Attack-Defense CTF. We got cooked.
 
 But we learned more in those few hours than we could have learned from weeks of reading write-ups. And honestly, I can't wait to do it again.
 
-Shoutout to my teammates - Eric Hendryani, Koh Tom Han and Teh Yu Xuan.
+---
+
+**Shoutout to my teammates:** Eric Hendryani, Koh Tom Han and Teh Yu Xuan.
