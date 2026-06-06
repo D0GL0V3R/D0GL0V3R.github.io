@@ -36,6 +36,8 @@ In hindsight, we had absolutely no idea what we were doing.
 ---
 ## So it Begins ...
 
+![AD Platform](/static/images/ADPlatform.jpeg)
+
 The competition started.
 
 Within minutes, our services were already being attacked.
